@@ -1,6 +1,10 @@
-package model;
+package com.example.RaceTrack.model;
 
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
 import java.time.OffsetDateTime;
+
 
 public class Location {
     public Location(double longitude, double latitude, OffsetDateTime measuredAt) {

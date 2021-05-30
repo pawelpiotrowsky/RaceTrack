@@ -1,4 +1,4 @@
-package controller;
+package com.example.RaceTrack.controller;
 
 
 import org.springframework.stereotype.Controller;
