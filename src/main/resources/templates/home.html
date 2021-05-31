@@ -26,7 +26,30 @@ function onMapClick(e) {
         .openOn(map);
 }
 map.on('click', onMapClick);
-map.addControl( new L.Control.Gps() );
+var current_position, current_accuracy;
+map.locate({setView: true, maxZoom: 16});
+function onLocationFound(e) {
+      if (current_position) {
+          map.removeLayer(current_position);
+          map.removeLayer(current_accuracy);
+      }
+      var radius = e.accuracy / 2;
+      current_position = L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+      current_accuracy = L.circle(e.latlng, radius).addTo(map);
+    }
+    function onLocationError(e) {
+      alert(e.message);
+    }
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationErro
+    function locate() {
+      map.locate({setView: true, maxZoom: 16});
+    }
+    setInterval(locate, 3000);
+
+
 
 </script>
 </body>
