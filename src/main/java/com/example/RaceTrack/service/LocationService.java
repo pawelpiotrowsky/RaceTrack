@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 public class LocationService {
     private final UserLocationRepository userLocationRepository;
 
-    public LocationService(UserLocationRepository userLocationRepository, Location location) {
+    public LocationService(UserLocationRepository userLocationRepository) {
         this.userLocationRepository = userLocationRepository;
     }
+
 
     public Location saveLocation(Location location) {
         return null;
