@@ -9,5 +9,5 @@ import java.io.Serializable;
 
 @Repository
 public interface UserLocationRepository extends JpaRepository<Location, Long> {
-
+    void deleteLocation(Long id);
 }
