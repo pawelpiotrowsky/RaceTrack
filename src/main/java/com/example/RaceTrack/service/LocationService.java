@@ -10,4 +10,5 @@ public class LocationService {
     public LocationService(UserLocationRepository userLocationRepository) {
         this.userLocationRepository = userLocationRepository;
     }
+
 }
