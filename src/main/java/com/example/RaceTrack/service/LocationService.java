@@ -11,11 +11,10 @@ public class LocationService {
     public LocationService(UserLocationRepository userLocationRepository, Location location) {
         this.userLocationRepository = userLocationRepository;
     }
-//
-//    public Location saveLocation(Location location){
-//        Location newLocation = new Location();
-//        return userLocationRepository.save(newLocation);
-//    }
+
+    public Location saveLocation(Location location) {
+        return null;
+    }
 
     public void deleteLocation(Long id) {
         userLocationRepository.deleteById(id);
